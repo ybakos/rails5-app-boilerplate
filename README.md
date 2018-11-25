@@ -22,3 +22,14 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+
+## Production Notes
+
+Configure env vars:
+
+* `AWS_S3_KEY`
+* `AWS_S3_SECRET`
+* `AWS_REGION`
+* `AWS_S3_BUCKET`
+
