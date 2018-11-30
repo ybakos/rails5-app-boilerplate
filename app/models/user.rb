@@ -13,7 +13,6 @@ class User < ApplicationRecord
   scope :active, -> { where(active: true) }
   scope :deactivated, -> { where(active: false) }
 
-
   def to_s
     "#{first_name} #{last_name}"
   end
@@ -24,6 +23,14 @@ class User < ApplicationRecord
 
   def active_for_authentication?
     super && active?
+  end
+
+  def status
+    active? ? 'active' : 'inactive'
+  end
+
+  def name_was
+    "#{first_name_was} #{last_name_was}"
   end
 
 end
