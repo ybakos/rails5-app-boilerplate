@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   before_action :restrict_unless_admin, only: [:index, :new, :create, :destroy]
+  before_action :prevent_normal_users_from_editing_and_viewing_other_users, only: [:edit, :update, :show]
   before_action :ignore_password_and_password_confirmation, only: :update
   before_action :set_user, only: [:show, :edit, :update, :destroy]
 
@@ -51,6 +52,9 @@ class UsersController < ApplicationController
   end
 
   private
+    def prevent_normal_users_from_editing_and_viewing_other_users
+      redirect_to(root_url) unless current_user.id == params[:id].to_i || current_user.admin?
+    end
 
     # https://github.com/plataformatec/devise/wiki/how-to:-manage-users-through-a-crud-interface
     def ignore_password_and_password_confirmation
