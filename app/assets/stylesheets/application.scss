@@ -62,6 +62,14 @@ footer {
   @extend .is-invalid;
 }
 
+.form-container {
+  width: 50%;
+  margin-top: 2rem;
+  input[type="submit"] {
+    margin-top: 1rem;
+    width: auto;
+  }
+}
 
 /* Authentication */
 

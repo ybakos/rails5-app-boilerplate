@@ -5,28 +5,31 @@
       %ul
         - @user.errors.full_messages.each do |message|
           %li= message
-
-  .field
+  %h2 Personal Information
+  .form-group
     = f.label :first_name
-    = f.text_field :first_name
-  .field
+    = f.text_field :first_name, class: 'form-control'
+  .form-group
     = f.label :last_name
-    = f.text_field :last_name
-  .field
+    = f.text_field :last_name, class: 'form-control'
+  .form-group
     = f.label :email
-    = f.text_field :email
-  .field
-    = f.label :password
-    = f.text_field :password
-  .field
-    = f.label :password_confirmation
-    = f.text_field :password_confirmation
+    = f.text_field :email, class: 'form-control'
   - if current_user.admin?
-    .field
+    %h3.mt-5 Role and Status
+    .form-group
       = f.label :role
-      = f.select :role, User.roles.keys.map {|k| [k.capitalize, k]}, {}
-    .field
-      = f.label :active
+      = f.select :role, User.roles.keys.map {|k| [k.capitalize, k]}, {}, class: 'form-control'
+    .form-group
       = f.check_box :active
-  .actions
-    = f.submit 'Save'
+      = f.label :active
+  = f.submit 'Save', class: 'form-control btn btn-primary'
+  %h3.mt-5 Update Password
+  .form-group
+    = f.label :password
+    = f.text_field :password, class: 'form-control'
+    %small{class: 'form-text text-muted'} (6 characters minimum)
+  .form-group
+    = f.label :password_confirmation
+    = f.text_field :password_confirmation, class: 'form-control'
+  = f.submit 'Save new password', class: 'form-control btn btn-secondary'
