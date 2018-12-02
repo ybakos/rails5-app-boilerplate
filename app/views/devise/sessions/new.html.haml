@@ -1,6 +1,6 @@
-.container-form-signin.text-center
+.container-auth.text-center
   %h1.h3.font-weight-normal Please sign in
-  = form_for(resource, as: resource_name, url: session_path(resource_name), html: {class: 'form-signin'}) do |f|
+  = form_for(resource, as: resource_name, url: session_path(resource_name), html: {class: 'form-auth form-signin'}) do |f|
     = f.label :email, class: 'sr-only'
     = f.email_field :email, autofocus: true,  required: true, autocomplete: 'email', placeholder: 'Email address', class: 'form-control'
     = f.label :password, class: 'sr-only'
@@ -10,5 +10,4 @@
         = f.check_box :remember_me
         = f.label :remember_me
     = f.submit 'Sign in', class: 'btn btn-lg btn-primary btn-block'
-  .mt-4
-    = render 'devise/shared/links'
+  .mt-4= render 'devise/shared/links'
