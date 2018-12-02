@@ -28,5 +28,10 @@
           %button.close{type: 'button', 'data-dismiss': 'alert', 'aria-label': 'Close'}
             %span{'aria-hidden': 'true'} &times;
       = yield
-    %footer.container
-      %p © YYYY ENTITY NAME. All rights reserved.
+    %footer.footer
+      .container.text-muted
+        %nav
+          %ul
+            %li= link_to 'A', '#'
+            %li= link_to 'B', '#'
+        %span © YYYY ENTITY NAME. All rights reserved.
