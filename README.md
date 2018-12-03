@@ -32,4 +32,6 @@ Configure env vars:
 * `AWS_S3_SECRET`
 * `AWS_REGION`
 * `AWS_S3_BUCKET`
+* `RECAPTCHA_SITE_KEY`
+* `RECAPTCHA_SECRET_KEY`
 
