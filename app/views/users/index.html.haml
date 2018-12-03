@@ -20,7 +20,7 @@
         %td= user.role
         %td= user.status
         %td= user.last_sign_in_at.localtime.to_s(:short)
-        %td.text-right
+        %td
           = link_to 'Edit', edit_user_path(user), class: 'btn btn-light btn-sm mr-4'
           - unless current_user == user
             = link_to 'Delete', user, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn text-danger btn-sm'
