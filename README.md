@@ -1,9 +1,13 @@
-# README
+# Rails 5 Application Boilerplate
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a starting point of a Rails 5 application that includes features common
+to most applications, such as user authentication. TODO what else.
 
-Things you may want to cover:
+## Expectations
+
+Ruby versions, database, etc.
+
+TODO Things you may want to cover:
 
 * Ruby version
 
@@ -24,6 +28,33 @@ Things you may want to cover:
 * ...
 
 
+## Development
+
+There are a few steps to get up and running in development.
+
+### Set the application name
+
+After forking and/or cloning, change `CHANGME` to the app name. It exists throughout the source, in:
+
+* config/application.rb
+* config/cable.yml
+* config/database.yml
+* config/environments/production.rb
+* package.json
+
+### Customize `.env`
+
+* `RECAPTCHA_SITE_KEY`
+* `RECAPTCHA_SECRET_KEY`
+
+### TODO
+
+
+## Testing
+
+TODO
+
+
 ## Production Notes
 
 Configure env vars:
@@ -32,6 +63,5 @@ Configure env vars:
 * `AWS_S3_SECRET`
 * `AWS_REGION`
 * `AWS_S3_BUCKET`
-* `RECAPTCHA_SITE_KEY`
-* `RECAPTCHA_SECRET_KEY`
 
+&copy; 2018 Yong Joseph Bakos. All rights reserved.
