@@ -15,6 +15,9 @@
   .form-group
     = f.label :email
     = f.text_field :email, class: 'form-control'
+  - if ['new', 'create'].include? action_name
+    %h3.mt-5 Initial Password
+    = render 'form_password_fields', f: f
   - if current_user.admin?
     %h3.mt-5 Role and Status
     .form-group
@@ -24,12 +27,7 @@
       = f.check_box :active
       = f.label :active
   = f.submit 'Save', class: 'form-control btn btn-primary'
-  %h3.mt-5 Update Password
-  .form-group
-    = f.label :password
-    = f.text_field :password, class: 'form-control'
-    %small{class: 'form-text text-muted'} (6 characters minimum)
-  .form-group
-    = f.label :password_confirmation
-    = f.text_field :password_confirmation, class: 'form-control'
-  = f.submit 'Save new password', class: 'form-control btn btn-secondary'
+  - if ['edit', 'update'].include? action_name
+    %h3.mt-5 Update Password
+    = render 'form_password_fields', f: f
+    = f.submit 'Save new password', class: 'form-control btn btn-secondary'
