@@ -292,7 +292,6 @@ DEPENDENCIES
   chromedriver-helper
   coffee-rails (~> 4.2)
   devise
-  dotenv
   dotenv-rails
   guard
   guard-minitest
