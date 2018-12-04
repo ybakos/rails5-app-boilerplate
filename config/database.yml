@@ -5,11 +5,11 @@ default: &default
 
 development:
   <<: *default
-  database: fido_development
+  database: CHANGEME_development
 
 test:
   <<: *default
-  database: fido_test
+  database: CHANGEME_test
 
 production:
   <<: *default
