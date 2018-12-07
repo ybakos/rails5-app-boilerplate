@@ -5,46 +5,11 @@ admin:
   role: 'admin'
   active: true
 
-first_host:
+guest:
   first_name: Fake
   last_name: Host
   email: fake2@example.com
-  role: 'host'
-  active: true
-
-second_host:
-  first_name: Second Fake
-  last_name: Host
-  email: fake3@example.com
-  role: 'host'
-  active: true
-
-first_observer:
-  first_name: Fake
-  last_name: Observer
-  email: fake4@example.com
-  role: 'observer'
-  active: true
-
-second_observer:
-  first_name: Second Fake
-  last_name: Observer
-  email: fake5@example.com
-  role: 'observer'
-  active: true
-
-first_participant:
-  first_name: Fake
-  last_name: Participant
-  email: fake6@example.com
-  role: 'participant'
-  active: true
-
-second_participant:
-  first_name: Second Fake
-  last_name: Participant
-  email: fake7@example.com
-  role: 'participant'
+  role: 'guest'
   active: true
 
 unknown:

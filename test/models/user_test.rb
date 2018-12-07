@@ -47,6 +47,14 @@ class UserTest < ActiveSupport::TestCase
     refute u.active_for_authentication?
   end
 
+  test 'responds to status with active or inactive' do
+    u = new_user
+    u.active = false
+    assert_equal 'inactive', u.status
+    u.active = true
+    assert_equal 'active', u.status
+  end
+
   test 'has a string representation of first_name last_name' do
     assert_equal users(:admin).to_s, 'Fake Admin'
   end
@@ -54,5 +62,13 @@ class UserTest < ActiveSupport::TestCase
   test 'has a string representation of last_name, first_name' do
     assert_equal users(:admin).last_name_first_name, 'Admin, Fake'
   end
+
+  test 'retains the original full name during a name change' do
+    u = users(:admin)
+    original_full_name = "#{u.first_name} #{u.last_name}"
+    u.first_name = "CHANGED"
+    assert_equal original_full_name, u.name_was
+  end
+
 
 end
