@@ -32,8 +32,9 @@ class UsersController < ApplicationController
   end
 
   def update
+    safe_params = current_user.admin? ? user_params : user_params_without_role_or_active
     respond_to do |format|
-      if @user.update(user_params)
+      if @user.update(safe_params)
         sign_in(@user, :bypass => true) if @user == current_user
         format.html { redirect_to @user, notice: 'User was successfully updated.' }
         format.json { render :show, status: :ok, location: @user }
@@ -72,6 +73,10 @@ class UsersController < ApplicationController
     def user_params
       params.require(:user).permit(:first_name, :last_name, :email, :password,
         :password_confirmation, :role, :active)
+    end
+
+    def user_params_without_role_or_active
+      user_params.except(:role, :active)
     end
 
 end
