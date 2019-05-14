@@ -34,7 +34,7 @@ There are a few steps to get up and running in development.
 
 ### Set the application name
 
-After forking and/or cloning, change `CHANGME` to the app name. It exists throughout the source, in:
+After forking and/or cloning, change `CHANGEME` to the app name. It exists throughout the source, in:
 
 * config/application.rb
 * config/cable.yml
