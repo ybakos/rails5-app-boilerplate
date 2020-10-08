@@ -29,7 +29,7 @@ group :development do
   gem 'web-console', '>= 4.0.4'
   gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'spring'
-  gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'spring-watcher-listen', '~> 2.0.1'
   gem 'guard'
   gem 'guard-minitest'
 end
