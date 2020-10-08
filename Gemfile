@@ -17,7 +17,7 @@ gem 'puma', '~> 5.0.2'
 gem 'rails', '~> 5.2.4.3'
 gem 'recaptcha', require: 'recaptcha/rails'
 gem 'sassc-rails', '~> 2.1.2'
-gem 'turbolinks', '~> 5'
+gem 'turbolinks', '~> 5.2.1'
 gem 'uglifier', '>= 1.3.0'
 
 group :development, :test do
