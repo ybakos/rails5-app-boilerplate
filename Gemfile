@@ -18,7 +18,7 @@ gem 'rails', '~> 5.2.4.3'
 gem 'recaptcha', require: 'recaptcha/rails'
 gem 'sassc-rails', '~> 2.1.2'
 gem 'turbolinks', '~> 5.2.1'
-gem 'uglifier', '>= 1.3.0'
+gem 'uglifier', '>= 4.2.0'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
