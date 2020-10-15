@@ -44,6 +44,8 @@ After forking and/or cloning, change `CHANGEME` to the app name. It exists throu
 
 ### Customize `.env`
 
+* `DATABASE_URL_DEV`
+* `DATABASE_URL_TEST`
 * `RECAPTCHA_SITE_KEY`
 * `RECAPTCHA_SECRET_KEY`
 
